@@ -1,0 +1,116 @@
+:root {
+  --page-bg: #7ec8e3;
+  --calc-bg: #0d0d0d;
+  --calc-radius: 28px;
+  --calc-padding: 20px;
+  --display-color: #f5f5f5;
+  --display-font: 2.75rem;
+  --btn-num-bg: #2a2a2a;
+  --btn-num-color: #fff;
+  --btn-util-bg: #a8a8a8;
+  --btn-util-color: #111;
+  --btn-op-bg: #ff9500;
+  --btn-op-color: #fff;
+  --btn-op-active: #e68600;
+  --btn-size: min(72px, 18vw);
+  --btn-gap: 12px;
+  --btn-font: 1.35rem;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--page-bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  padding: 24px;
+}
+
+.calculator {
+  width: min(360px, 92vw);
+  background: var(--calc-bg);
+  border-radius: var(--calc-radius);
+  padding: var(--calc-padding);
+  box-shadow: var(--shadow);
+}
+
+.display {
+  display: block;
+  min-height: 3.2rem;
+  margin-bottom: 20px;
+  padding: 8px 4px 16px;
+  text-align: right;
+  font-size: clamp(1.25rem, 5.5vw, var(--display-font));
+  font-weight: 300;
+  color: var(--display-color);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+  line-height: 1.15;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--btn-gap);
+}
+
+.btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border: none;
+  border-radius: 50%;
+  font-size: var(--btn-font);
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.12s ease, transform 0.08s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+
+.btn-num {
+  background: var(--btn-num-bg);
+  color: var(--btn-num-color);
+}
+
+.btn-util {
+  background: var(--btn-util-bg);
+  color: var(--btn-util-color);
+}
+
+.btn-op {
+  background: var(--btn-op-bg);
+  color: var(--btn-op-color);
+}
+
+.btn-op:active {
+  background: var(--btn-op-active);
+}
+
+.btn-zero {
+  grid-column: span 2;
+  width: 100%;
+  border-radius: 999px;
+  justify-self: stretch;
+}
+
+@media (max-width: 380px) {
+  :root {
+    --display-font: 2.25rem;
+    --btn-gap: 10px;
+  }
+}

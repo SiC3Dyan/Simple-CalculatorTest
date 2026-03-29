@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="calculator" role="application" aria-label="Calculator">
+        <output class="display" id="display" aria-live="polite">0</output>
+        <div class="keys">
+          <button type="button" class="btn btn-util" data-action="clear">AC</button>
+          <button type="button" class="btn btn-util" data-action="delete">DEL</button>
+          <button type="button" class="btn btn-util" data-action="percent">%</button>
+          <button type="button" class="btn btn-op" data-operator="/">÷</button>
+
+          <button type="button" class="btn btn-num" data-digit="7">7</button>
+          <button type="button" class="btn btn-num" data-digit="8">8</button>
+          <button type="button" class="btn btn-num" data-digit="9">9</button>
+          <button type="button" class="btn btn-op" data-operator="*">×</button>
+
+          <button type="button" class="btn btn-num" data-digit="4">4</button>
+          <button type="button" class="btn btn-num" data-digit="5">5</button>
+          <button type="button" class="btn btn-num" data-digit="6">6</button>
+          <button type="button" class="btn btn-op" data-operator="-">-</button>
+
+          <button type="button" class="btn btn-num" data-digit="1">1</button>
+          <button type="button" class="btn btn-num" data-digit="2">2</button>
+          <button type="button" class="btn btn-num" data-digit="3">3</button>
+          <button type="button" class="btn btn-op" data-operator="+">+</button>
+
+          <button type="button" class="btn btn-num btn-zero" data-digit="0">0</button>
+          <button type="button" class="btn btn-num" data-action="decimal">.</button>
+          <button type="button" class="btn btn-op" data-action="equals">=</button>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

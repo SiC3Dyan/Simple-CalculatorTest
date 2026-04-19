@@ -22,4 +22,13 @@
         return op;
     }
   }
+
+  function formatResult (n) {
+    const s = Striung(n);
+    if (s.length > 14) {
+      return String(parseFloat(n.toPrecision(12)));
+    }
+    
+    return 0;
+  }
 }
